@@ -7,7 +7,7 @@ mobs:register_mob("mob_horse:horse", {
 	visual_size = {x = 1.20, y = 1.20},
 	mesh = "mobs_horse.x",
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.25, 0.4},
-	animation = { 
+	animation = {
 		speed_normal = 15,
 		speed_run = 30,
 		stand_start = 25,
@@ -89,6 +89,11 @@ mobs:register_mob("mob_horse:horse", {
 
 		-- feed, tame or heal horse
 		if mobs:feed_tame(self, clicker, 10, true, true) then
+			return
+		end
+
+		-- applying protection rune
+		if mobs:protect(self, clicker) then
 			return
 		end
 
