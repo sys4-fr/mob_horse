@@ -111,7 +111,7 @@ mobs:register_mob("mob_horse:horse", {
 				if inv:room_for_item("main", "mobs:saddle") then
 					inv:add_item("main", "mobs:saddle")
 				else
-					minetest.add_item(clicker:getpos(), "mobs:saddle")
+					minetest.add_item(clicker:get_pos(), "mobs:saddle")
 				end
 
 			-- attach player to horse
@@ -155,7 +155,7 @@ local apply_shoes = function(name, itemstack, obj, shoes, speed, jump, reverse)
 	if ent and ent.name and ent.name == "mob_horse:horse" then
 
 		if ent.shoed then
-			minetest.add_item(mob:getpos(), ent.shoed)
+			minetest.add_item(mob:get_pos(), ent.shoed)
 		end
 
 		ent.max_speed_forward = speed
