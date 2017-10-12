@@ -251,3 +251,15 @@ minetest.register_craft({
 		{"default:diamond", "", "default:diamond"},
 	}
 })
+
+-- lucky blocks
+if minetest.get_modpath("lucky_block") then
+
+lucky_block:add_blocks({
+	{"dro", {"mobs:horseshoe_steel"}},
+	{"dro", {"mobs:horseshoe_bronze"}},
+	{"dro", {"mobs:horseshoe_mese"}},
+	{"dro", {"mobs:horseshoe_diamond"}},
+})
+
+end
