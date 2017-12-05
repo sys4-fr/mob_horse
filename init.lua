@@ -135,7 +135,7 @@ mobs:spawn({
 	name = "mob_horse:horse",
 	nodes = {"default:dirt_with_grass", "ethereal:dry_dirt"},
 	min_light = 10,
-	chance = 15000,
+	chance = 60000,
 	min_height = 10,
 	max_height = 31000,
 	day_toggle = true,
